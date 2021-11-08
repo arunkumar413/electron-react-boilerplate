@@ -3,20 +3,7 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
   font-family: sans-serif;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button {
@@ -59,4 +46,87 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+
+.HomePage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 30fr 1fr 5fr;
+}
+
+.HomePage header,
+aside,
+footer,
+main {
+  border: solid 0.5px gray;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.HomePage header,
+footer {
+  grid-column: 1/-1;
+  border: solid 0.5px grey;
+}
+.HomePage .left-side-bar {
+  grid-column: 1/2;
+  border: solid 0.5px grey;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.HomePage main {
+  grid-column: 2/5;
+  border: solid 0.5px grey;
+}
+
+.left-side-bar a {
+  font-size: 1.5rem;
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.left-side-bar a:hover{
+  color: crimson;
+}
+
+
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.left-side-bar li{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  width: 100%;
+}
+.left-side-bar li:hover a{
+  color: crimson;
+}
+
+.left-side-bar img{
+  filter: grayscale(10%);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.4;
+
+}
+
+.left-side-bar svg path {
+  fill: blue;
 }
